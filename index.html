@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/navigation_left.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/navigation_center.css">
+  <link rel="stylesheet" href="styles/navigation_right.css">
+  <link rel="stylesheet" href="styles/aside_left.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/aside_right.css">
+  <link rel="stylesheet" href="styles/footer_left.css">
+  <link rel="stylesheet" href="styles/footer_center.css">
+  <link rel="stylesheet" href="styles/footer_right.css">
+  <title>Spotify - clone</title>
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="header-left">
+        <div class="menu-container">
+          <input type="checkbox" id="menu-toggle" hidden>
+          <label for="menu-toggle" class="icon-link" tabindex="0">
+            <img src="img/menu.svg" alt="Menu">
+          </label>
+          <ul class="drop-menu">
+            <li><a href="#">Arquivo</a></li>
+            <li><a href="#">Editar</a></li>
+            <li><a href="#">Exibir</a></li>
+            <li><a href="#">Ajuda</a></li>
+          </ul>
+        </div>
+        <a href="#" class="icon-link">
+          <img src="img/seta_esquerda.svg" alt="seta_esquerda">
+        </a>
+        <a href="#" class="icon-link">
+          <img src="img/seta_direita.svg" alt="seta_direita">
+        </a>
+      </div>
+      <div class="header-center">
+        <a href="#" class="home-link">
+          <img src="img/home.svg" alt="Home">
+        </a>
+        <div class="search-container">
+          <img src="img/search.svg" alt="Pesquisar" class="search-icon">
+          <input type="text" placeholder="Pesquisar">
+  
+          <div class="separator"></div>
+          <a href="#" class="nav-icon-link">
+            <img src="img/navigation.svg" alt="Navegação">
+          </a>
+        </div>
+      </div>
+      <div class="header-right">
+        <a href="#" class="icon-link">
+          <img src="img/sino.svg" alt="Notificações">
+        </a>
+        <a href="#" class="icon-link">
+          <img src="img/group.svg" alt="Grupos">
+        </a>
+        <a href="#" class="icon-link profile-icon">
+          <img src="img/profile.svg" alt="Perfil">
+        </a>
+      </div>
+    </nav>
+  </header>
+  <div class="page-content">
+    <input type="checkbox" id="aside-toggle" hidden>
+    <aside class="left-aside">
+      <div class="library-header">
+        <div class="library-left">
+          <label for="aside-toggle" class="aside-toggle-btn">
+            <img src="img/hide.svg" class="hide-icon">
+            <img src="img/library.svg" class="library-icon">
+            <img src="img/open.svg" class="expand-icon">
+          </label>
+          <label for="aside-toggle" class="library-title">Sua Biblioteca</label>
+        </div>
+
+        <div class="library-actions">
+          <button class="add-button">
+            <img src="img/add.svg" alt="Adicionar">
+            <span>Criar</span>
+          </button>
+
+          <button class="expand-button">
+            <img src="img/zoom.svg" alt="Expandir Biblioteca">
+          </button>
+        </div>
+      </div>
+
+      <div class="playlist-section">
+        <button class="playlist-button">Playlists</button>
+
+        <div class="playlist-header">
+          <img src="img/search.svg" alt="Pesquisar" class="search-icon">
+
+          <input type="checkbox" id="order-toggle" hidden>
+          <div class="recentes-container">
+            <span class="recentes-label">Recentes</span>
+            <label for="order-toggle" class="menu-label">
+              <img src="img/menu_list.svg" alt="Menu" class="menu-icon">
+            </label>
+          </div>
+
+          <ul class="order-menu">
+            <li class="order-menu-title">Classificar por</li>
+            <li>Recentes</li>
+            <li>Adicionado recentemente</li>
+            <li>Ordem alfabética</li>
+            <li>Criador</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="playlist-list">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/1LcY89L4kbyvHe6SO9Olcj?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+          class="playlist--spot"></iframe>
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/5Pmh0zasLHvhSvEG29kZm4?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+          class="playlist--spot">
+        </iframe>
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/7aunjVcK7nQyi2M2cZiRgU?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+          class="playlist--spot"></iframe>
+
+      </div>
+
+    </aside>
+
+
+    <main class="main-content">
+      <div class="main-filters">
+        <button class="filter-button active">Tudo</button>
+        <button class="filter-button">Músicas</button>
+        <button class="filter-button">Podcasts</button>
+      </div>
+      <div class="highlight-cards">
+        <div class="highlight-card">
+          <img src="img/playlist1.png" alt="Playlist 1">
+          <span>Sad moments</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist2.png" alt="Playlist 2">
+          <span>Disco time</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist3.png" alt="Playlist 3">
+          <span>Só as melhores</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist4.jpeg" alt="Playlist 4">
+          <span>As melhores de Bruno Mars</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist5.jpeg" alt="Playlist 5">
+          <span>⎅⍀⏃☌⍜⋏ ⋔⎍⌇⟟☊ ⊑⟒⍀⟒</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist6.jpeg" alt="Playlist 6">
+          <span>Só para você</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist7.png" alt="Playlist 7">
+          <span>Caminhada do dia</span>
+        </div>
+        <div class="highlight-card">
+          <img src="img/playlist8.jpeg" alt="Playlist 8">
+          <span>Esquenta Brasil</span>
+        </div>
+      </div>
+      <div class="section-header">
+        <h2 class="section-title">Sextou!</h2>
+        <a href="#" class="show-more">Mostrar mais</a>
+      </div>
+
+      <div class="music-cards">
+        <div class="music-card">
+          <img src="img/musica1.jpeg" alt="Musica1" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Summer Vibes</strong>
+            <span class="artist-name">DJ Chill</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica2.jpeg" alt="Musica2" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Rand</strong>
+            <span class="artist-name">Fil</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica3.jpeg" alt="musica3" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Power of pink</strong>
+            <span class="artist-name">Gaer</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica4.jpeg" alt="Musica4" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Sunshine</strong>
+            <span class="artist-name">DJ Chill</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica5.jpeg" alt="Musica5" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Cloud</strong>
+            <span class="artist-name">Dreamy</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica6.jpeg" alt="Musica1" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Amiga da minha mulher</strong>
+            <span class="artist-name">Seu Jorge</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-header">
+        <h2 class="section-title">Só para você!</h2>
+        <a href="#" class="show-more">Mostrar mais</a>
+      </div>
+      <div class="music-cards">
+        <div class="music-card">
+          <img src="img/musica7.jpeg" alt="Musica7" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Tempo</strong>
+            <span class="artist-name">Adriana Mourin</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica8.jpeg" alt="Musica8" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Loucra</strong>
+            <span class="artist-name">Thiago Amorin</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica9.jpeg" alt="musica9" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Eletronic</strong>
+            <span class="artist-name">XLR8</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica10.jpeg" alt="Music10" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Verão</strong>
+            <span class="artist-name">Hugor</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica11.jpeg" alt="Musica11" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">Vagalumes</strong>
+            <span class="artist-name">Tlou</span>
+          </div>
+        </div>
+        <div class="music-card">
+          <img src="img/musica12.jpeg" alt="Musica12" class="card-img">
+          <button class="play-button">
+            <img src="img/play.svg" alt="Tocar">
+          </button>
+          <div class="music-info">
+            <strong class="track-name">I wanna be yours</strong>
+            <span class="artist-name">Artic Monkey</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <aside class="right-aside">
+      <div class="queue-header">
+        <span class="queue-title">
+          <strong>Fila</strong> tocado recentemente
+        </span>
+        <button class="close-button">
+          <img src="img/close.svg" alt="fechar">
+        </button>
+      </div>
+
+      <h3 class="now-playing-title">Tocando agora</h3>
+
+      <div class="now-playing-card">
+        <img src="img/musica13.jpeg" alt="musica13">
+        <div class="music-info">
+          <strong class="music-title">Noite</strong>
+          <span class="artist-name">Night</span>
+        </div>
+      </div>
+
+      <div class="next-up-section">
+        <h3 class="next-title">Próximas</h3>
+        <div class="next-music-list">
+          <div class="next-music-card">
+            <img src="img/musica14.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">Future</strong>
+              <span class="next-artist-name">Futurama</span>
+            </div>
+          </div>
+          <div class="next-music-card">
+            <img src="img/musica1.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">Summer vibes</strong>
+              <span class="next-artist-name">DJ Chill</span>
+            </div>
+          </div>
+          <div class="next-music-card">
+            <img src="img/musica7.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">Tempo</strong>
+              <span class="next-artist-name">Adriana Mourin</span>
+            </div>
+          </div>
+          <div class="next-music-card">
+            <img src="img/musica4.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">Sunshine</strong>
+              <span class="next-artist-name">DJ Chill</span>
+            </div>
+          </div>
+          <div class="next-music-card">
+            <img src="img/musica15.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">Hell</strong>
+              <span class="next-artist-name">Mister Doom</span>
+            </div>
+          </div>
+          <div class="next-music-card">
+            <img src="img/musica8.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">Loucura</strong>
+              <span class="next-artist-name">Thiado Amorin</span>
+            </div>
+          </div>
+          <div class="next-music-card">
+            <img src="img/musica12.jpeg" alt="musica14" class="next-music-img">
+            <div class="music-info">
+              <strong class="next-music-title">I wanna be yours</strong>
+              <span class="next-artist-name">Artic Monkeys</span>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+  </div>
+  </aside>
+
+  </div>
+  <footer>
+    <nav class="main-footer">
+      <div class="footer-left">
+        <img src="img/musica13.jpeg" alt="Musica9" class="music-cover">
+        <div class="music-info">
+          <span class="music-title">Noite</span>
+          <span class="music-artist">Night</span>
+        </div>
+        <button class="favorite-btn">
+          <img src="img/check_circl.svg" alt="Favorito" />
+      </div>
+
+      <div class="footer-center">
+        <div class="player-control">
+          <button class="btn shuffle" aria-label="Aleatorio">
+            <img src="img/random.svg" alt="Shuffle">
+          </button>
+          <button class="btn previous" aria-label="Anterior">
+            <img src="img/Voltar.svg" alt="Anterior">
+          </button>
+          <button class="btn play-pause" aria-label="Play/Pause">
+            <img src="img/play.svg" alt="Play">
+          </button>
+          <button class="btn next" aria-label="Próxima">
+            <img src="img/Pular.svg" alt="Próxima">
+          </button>
+          <button class="btn repeat" aria-label="Repetir">
+            <img src="img/repetir.svg" alt="Repetir">
+          </button>
+        </div>
+        <div class="progress-container">
+          <span class="time elapsed">0:00</span>
+          <input type="range" class="progress-bar" min="0" max="100" value="0" step="1">
+          <span class="time duration">3:45</span>
+        </div>
+      </div>
+      </div>
+      <div class="footer-right">
+        <button class="btn device" aria-label="Cantar">
+          <img src="img/mic.svg" alt="Microfone">
+        </button>
+        <button class="btn device" aria-label="Dispositivos disponíveis">
+          <img src="img/devices.svg" alt="Dispositivos">
+        </button>
+        <button class="btn volume" aria-label="Volume">
+          <img src="img/volum_on.svg" alt="Volume">
+        </button>
+        <input type="range" class="volume-slider" min="0" max="100" value="50" step="1">
+        <button class="btn device" aria-label="Minimizar som">
+          <img src="img/assist__web.svg" alt="Minimizar som">
+        </button>
+        <button class="btn device" aria-label="Tela fullscreen">
+          <img src="img/zoom_fullScream.svg" alt="fullscreen">
+        </button>
+      </div>
+    </nav>
+  </footer>
+</body>
+
+
+
+</html>

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background-color: #121212;
+    height: 50px;
+    position: relative;
+}
+
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.icon-link img{
+    width: 20px;
+    height: 20px;
+}
+
+.icon-link {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.icon-link:hover{
+    background: rgba(0, 0, 0, 0.1);
+}

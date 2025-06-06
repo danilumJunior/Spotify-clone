@@ -1,0 +1,271 @@
+.left-aside {
+    width: 300px;
+    background-color: #1E1E1E;
+    color: white;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #aside-toggle:checked ~ .left-aside {
+    width: 75px;
+  }
+  
+  /* Biblioteca - header */
+  .library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .library-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  
+  /* Botão que alterna o aside */
+  .aside-toggle-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+.aside-toggle-btn img{
+    width: 24px;
+    height: 24px;
+}
+
+  /* Ícones do botão toggle */
+  .hide-icon, .library-icon, .expand-icon {
+    display: none;
+  }
+
+  #aside-toggle:checked ~ .left-aside .library-header{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+
+  #aside-toggle:not(:checked) ~ .left-aside .hide-icon { display: inline; }
+  #aside-toggle:checked ~ .left-aside .library-icon { display: inline; }
+  #aside-toggle:checked ~ .left-aside .aside-toggle-btn:hover .library-icon { display: none; }
+  #aside-toggle:checked ~ .left-aside .aside-toggle-btn:hover .expand-icon { display: inline; }
+  
+  /* Oculta o título quando compacto */
+  .library-title {
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #aside-toggle:checked ~ .left-aside .library-title {
+    display: none;
+  }
+  
+  /* BOTÕES AÇÕES */
+  .library-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #aside-toggle:checked ~ .left-aside .library-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Botão de Criar */
+  .add-button {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 999px;
+    cursor: pointer;
+    
+  }
+
+  .add-button:hover {
+    background-color: #3a3a3a;
+  }
+  .add-button img {
+    width: 24px;
+    height: 24px;
+  }
+  .add-button span {
+    margin-left: 6px;
+    font-size: 13px;
+  }
+  
+  /* Compactado: só o ícone de criar aparece */
+  #aside-toggle:checked ~ .left-aside .add-button {
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  #aside-toggle:checked ~ .left-aside .add-button span {
+    display: none;
+  }
+  
+  /* Esconde botão de expandir quando compacto */
+  .expand-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #aside-toggle:checked ~ .left-aside .expand-button {
+    display: none;
+  }
+  
+
+ /*  playlists*/
+ 
+ .playlist-list{
+  padding-top: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+ .playlist-section {
+    padding: 12px;
+    
+  }
+  
+  .playlist-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 999px; 
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .playlist-button:hover {
+    background-color: #3a3a3a;
+  }
+
+  .playlist-header {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  width: 100%;
+  position: relative;
+  }
+  
+  .search-icon {
+    width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 10px;
+  }
+  
+  .recentes-container {
+    display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+  flex-grow: 1; 
+ 
+  min-width: 0; 
+}
+  
+  
+  .recentes-label {
+    font-size: 13px;
+    color: #ccc;
+  }
+  
+  .menu-label {
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .order-menu {
+    display: none;
+    position: absolute;
+    top: 36px;       
+    right: 0;        
+    background-color: #282828;
+    border-radius: 6px;
+    padding: 8px;
+    list-style: none;
+    font-size: 13px;
+    color: white;
+    width: max-content;
+    z-index: 1000;   
+  }
+  #order-toggle:checked ~ .order-menu {
+    display: block;
+  }
+  
+ 
+#aside-toggle:checked ~ .left-aside .playlist-header {
+    display: none;
+  }
+  
+  
+  #aside-toggle:checked ~ .left-aside .playlist-list {
+    padding: 0 8px;
+  }
+  
+  
+  #aside-toggle:checked ~ .left-aside .playlist-list iframe {
+    height: 120px; 
+    border-radius: 8px;
+  }
+  
+  #aside-toggle:checked ~ .left-aside .playlist-button {
+    display: none; 
+  }
+  
+
+
+
+  .order-menu-title {
+    font-weight: bold;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #444;
+    cursor: default; 
+    color: #bbb;
+  }
+
+  .order-menu li:not(.order-menu-title):hover {
+    background-color: #444;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    padding: 10px;
+  }
+
+  .order-menu li {
+    padding: 8px 12px;      
+    margin-bottom: 6px;     
+    list-style: none;       
+  }
+  
+  .order-menu li:last-child {
+    margin-bottom: 0;       
+  }
+  
+
+  
+  

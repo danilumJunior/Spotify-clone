@@ -1,0 +1,36 @@
+.footer-right {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .footer-right .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s;
+  }
+  
+  .footer-right .btn:hover {
+    filter: brightness(0.8) invert(1);
+  }
+  
+  .volume-slider {
+    width: 100px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: #404040;
+  }
+  
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 1px;
+  }
