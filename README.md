@@ -85,7 +85,18 @@ A aplicação web é composta por:
 
 ## 📸 Capturas de Tela
 
-![alt text](image.png)
+- Tela principal
+![Preview do projeto](screenshot/Tela_Principal.png)
+
+-Menu Hamburguer Principal
+![Menu Principal](screenshot/Tela_Principal.png)
+
+-Menu Hamburguer Aside
+![Menu Hamburguer Aside](screenshot/Menu_Hamburguer_Aside.png)
+
+- Tela Aside Compactado
+![Aside Compactado](screenshot/Aside_Compactado.png)
+
 
 ## 🚀 Como Executar
 
