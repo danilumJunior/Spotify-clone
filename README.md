@@ -85,7 +85,7 @@ A aplicação web é composta por:
 
 ## 📸 Capturas de Tela
 
-(Adicione aqui capturas da interface: biblioteca expandida, conteúdo principal, fila da direita...)
+![alt text](image.png)
 
 ## 🚀 Como Executar
 
