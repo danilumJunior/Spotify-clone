@@ -88,10 +88,10 @@ A aplicação web é composta por:
 - Tela principal
 ![Preview do projeto](screenshot/Tela_Principal.png)
 
--Menu Hamburguer Principal
+- Menu Hamburguer Principal
 ![Menu Principal](screenshot/Tela_Principal.png)
 
--Menu Hamburguer Aside
+- Menu Hamburguer Aside
 ![Menu Hamburguer Aside](screenshot/Menu_Hamburguer_Aside.png)
 
 - Tela Aside Compactado
