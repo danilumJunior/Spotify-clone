@@ -91,7 +91,7 @@ A aplicação web é composta por:
 
 - Menu Hamburguer Principal
 
-![Menu Principal](screenshot/Tela_Principal.png)
+![Menu Principal](screenshot/Menu_Hamburguer_Principal.png)
 
 - Menu Hamburguer Aside
 
